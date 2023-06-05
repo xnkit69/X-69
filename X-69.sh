@@ -21,27 +21,27 @@ detect_distro() {
 }
 
 pause() {
-    read -n1 -r -p "Press any key to continue..." key
+    read -n1 -r -p "Press any key to continue X-69..." key
 }
 banner() {
     clear
     echo -e "\e[1;31m"
     if ! [ -x "$(command -v figlet)" ]; then
-        echo 'Introducing TBomb'
+        echo 'Introducing X-69'
     else
-        figlet TBomb
+        figlet X-69
     fi
     if ! [ -x "$(command -v toilet)" ]; then
-        echo -e "\e[4;34m This Bomber Was Created By \e[1;32mSpeedX \e[0m"
+        echo -e "\e[4;34m This Tool Was Created By \e[1;32mAnkit \e[0m"
     else
         echo -e "\e[1;34mCreated By \e[1;34m"
-        toilet -f mono12 -F border SpeedX
+        toilet -f mono12 -F border Ankit
     fi
     echo -e "\e[1;34m For Any Queries Join Me!!!\e[0m"
-    echo -e "\e[1;32m           Telegram: https://t.me/TBombChat \e[0m"
-    echo -e "\e[4;32m   YouTube: https://www.youtube.com/c/SpeedXTech \e[0m"
+    echo -e "\e[1;32m           Telegram: https://t.me/xnkit69 \e[0m"
+    echo -e "\e[4;32m   Instagram: https://instagram.com/xnkit69 \e[0m"
     echo " "
-    echo "NOTE: Kindly move to the PIP version Of TBomb for more stability."
+    echo "NOTE: Kindly move to the PIP version Of X-69 for more stability."
     echo " "
 }
 
@@ -82,7 +82,7 @@ install_deps(){
     else
         echo "We could not install dependencies."
         echo "Please make sure you have git, python3, pip3 and requirements installed."
-        echo "Then you can execute bomber.py ."
+        echo "Then you can execute X-69.py ."
         exit
     fi
 }
@@ -98,7 +98,7 @@ else
     echo .
     echo .
     install_deps
-    echo This Script Was Made By SpeedX > .update
+    echo This Script Was Made By Ankit > .update
     echo 'Requirements Installed....'
     pause
 fi
@@ -107,27 +107,27 @@ do
     banner
     echo -e "\e[4;31m Please Read Instruction Carefully !!! \e[0m"
     echo " "
-    echo "Press 1 To  Start SMS  Bomber "
-    echo "Press 2 To  Start CALL Bomber "
-    echo "Press 3 To  Start MAIL Bomber (Not Yet Available)"
-    echo "Press 4 To  Update (Works On Linux And Linux Emulators) "
-    echo "Press 5 To  Exit "
+    echo "Press 1 To crack Instagram "
+    echo "Press 2 To crack Telegram "
+    echo "Press 3 To crack Whatsapp "
+    echo "Press 4 For More Tools "
+    echo "Press 5 For help "
     read ch
     clear
     if [ $ch -eq 1 ];then
-        $PYTHON bomber.py --sms
+        $PYTHON x-69.py --sms
         exit
     elif [ $ch -eq 2 ];then
-        $PYTHON bomber.py --call
+        $PYTHON X-69.py --call
         exit
     elif [ $ch -eq 3 ];then
-        $PYTHON bomber.py --mail
+        $PYTHON X-69.py --mail
         exit
     elif [ $ch -eq 4 ];then
         echo -e "\e[1;34m Downloading Latest Files..."
         rm -f .update
-        $PYTHON bomber.py --update
-        echo -e "\e[1;34m RUN TBomb Again..."
+        $PYTHON X-69.py --update
+        echo -e "\e[1;34m RUN X-69 Again..."
         pause
         exit
     elif [ $ch -eq 5 ];then
