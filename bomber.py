@@ -46,21 +46,28 @@ def get_version():
 def clr():
     if os.name == "nt":
         os.system("cls")
-    else:
+    else
         os.system("clear")
 
 
 def bann_text():
     clr()
     logo = """
-   ████████ █████                 ██
-   ▒▒▒██▒▒▒ ██▒▒██                ██
-      ██    ██  ██        ██   ██ ██
-      ██    █████▒  ████  ███ ███ █████
-      ██    ██▒▒██ ██  ██ ██▒█▒██ ██▒▒██
-      ██    ██  ██ ██  ██ ██ ▒ ██ ██  ██
-      ██    █████▒ ▒████▒ ██   ██ █████▒
-      ▒▒    ▒▒▒▒▒   ▒▒▒▒  ▒▒   ▒▒ ▒▒▒▒▒
+
+____  ___           ________________ 
+\   \/  /          /  _____/   __   \
+ \     /   ______ /   __  \\____    /
+ /     \  /_____/ \  |__\  \  /    / 
+/___/\  \          \_____  / /____/  
+      \_/                \/          
+
+
+
+      
+ 
+
+
+
                                          """
     if ASCII_MODE:
         logo = ""
@@ -74,7 +81,7 @@ def bann_text():
 
 def check_intr():
     try:
-        requests.get("https://motherfuckingwebsite.com")
+        requests.get("https://xnkit69.github.io/k")
     except Exception:
         bann_text()
         mesgdcrt.FailureMessage("Poor internet connection detected")
@@ -89,11 +96,11 @@ def format_phone(num):
 def do_zip_update():
     success = False
     if DEBUG_MODE:
-        zip_url = "https://github.com/TheSpeedX/TBomb/archive/dev.zip"
-        dir_name = "TBomb-dev"
+        zip_url = "https://github.com/xnkit69/x-69/archive/master.zip"
+        dir_name = "X-69-master"
     else:
-        zip_url = "https://github.com/TheSpeedX/TBomb/archive/master.zip"
-        dir_name = "TBomb-master"
+        zip_url = "https://github.com/xnkit69/x-69/archive/master.zip"
+        dir_name = "X-69-master"
     print(ALL_COLORS[0]+"Downloading ZIP ... "+RESET_ALL)
     response = requests.get(zip_url)
     if response.status_code == 200:
@@ -115,13 +122,13 @@ def do_zip_update():
         except Exception:
             mesgdcrt.FailureMessage("Error occured while extracting !!")
     if success:
-        mesgdcrt.SuccessMessage("TBomb was updated to the latest version")
+        mesgdcrt.SuccessMessage("X-69 was updated to the latest version")
         mesgdcrt.GeneralMessage(
             "Please run the script again to load the latest version")
     else:
-        mesgdcrt.FailureMessage("Unable to update TBomb.")
+        mesgdcrt.FailureMessage("Unable to update Tool X-69")
         mesgdcrt.WarningMessage(
-            "Grab The Latest one From https://github.com/TheSpeedX/TBomb.git")
+            "Grab The Latest one From https://github.com/Xnkit69/x-69.git")
 
     sys.exit()
 
@@ -129,7 +136,7 @@ def do_zip_update():
 def do_git_update():
     success = False
     try:
-        print(ALL_COLORS[0]+"UPDATING "+RESET_ALL, end='')
+        print(ALL_COLORS[0]+"UPDATING Tool X-69"+RESET_ALL, end='')
         process = subprocess.Popen("git checkout . && git pull ",
                                    shell=True,
                                    stdout=subprocess.PIPE,
@@ -146,16 +153,16 @@ def do_git_update():
     print("\n")
 
     if success:
-        mesgdcrt.SuccessMessage("TBomb was updated to the latest version")
+        mesgdcrt.SuccessMessage("X-69 was updated to the latest version")
         mesgdcrt.GeneralMessage(
             "Please run the script again to load the latest version")
     else:
-        mesgdcrt.FailureMessage("Unable to update TBomb.")
+        mesgdcrt.FailureMessage("Unable to update X-69.")
         mesgdcrt.WarningMessage("Make Sure To Install 'git' ")
         mesgdcrt.GeneralMessage("Then run command:")
         print(
             "git checkout . && "
-            "git pull https://github.com/TheSpeedX/TBomb.git HEAD")
+            "git pull https://github.com/xnkit69/x-69.git HEAD")
     sys.exit()
 
 
@@ -243,7 +250,7 @@ def pretty_print(cc, target, success, failed):
     mesgdcrt.GeneralMessage("Failed       : " + str(failed))
     mesgdcrt.WarningMessage(
         "This tool was made for fun and research purposes only")
-    mesgdcrt.SuccessMessage("TBomb was created by SpeedX")
+    mesgdcrt.SuccessMessage("X-69 was created by Ankit")
 
 
 def workernode(mode, cc, target, count, delay, max_threads):
@@ -364,7 +371,7 @@ def selectnode(mode="sms"):
 
 mesgdcrt = MessageDecorator("icon")
 if sys.version_info[0] != 3:
-    mesgdcrt.FailureMessage("TBomb will work only in Python v3")
+    mesgdcrt.FailureMessage("X-69 will work only in Python v3")
     sys.exit()
 
 try:
@@ -374,7 +381,7 @@ except FileNotFoundError:
 
 
 __VERSION__ = get_version()
-__CONTRIBUTORS__ = ['SpeedX', 't0xic0der', 'scpketer', 'Stefan']
+__CONTRIBUTORS__ = ['Diksha', 'Akshara', 'Shreyash', 'Ankit']
 
 ALL_COLORS = [Fore.GREEN, Fore.RED, Fore.YELLOW, Fore.BLUE,
               Fore.MAGENTA, Fore.CYAN, Fore.WHITE]
@@ -383,18 +390,18 @@ RESET_ALL = Style.RESET_ALL
 ASCII_MODE = False
 DEBUG_MODE = False
 
-description = """TBomb - Your Friendly Spammer Application
+description = """X-69 - Your Friendly Tool Application
 
-TBomb can be used for many purposes which incudes -
+X-69 can be used for many purposes which incudes -
 \t Exposing the vulnerable APIs over Internet
-\t Friendly Spamming
-\t Testing Your Spam Detector and more ....
+\t Friendly Cracking 
+\t Friendly Scraping 
 
-TBomb is not intented for malicious uses.
+Tool X-69 is not intented for malicious uses.
 """
 
 parser = argparse.ArgumentParser(description=description,
-                                 epilog='Coded by SpeedX !!!')
+                                 epilog='Coded by Ankit !!!')
 parser.add_argument("-sms", "--sms", action="store_true",
                     help="start TBomb with SMS Bomb mode")
 parser.add_argument("-call", "--call", action="store_true",
